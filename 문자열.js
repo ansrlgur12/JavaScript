@@ -35,3 +35,29 @@ console.log(num2);
 
 let sum = 0.1 + 0.2;
 console.log(sum);
+
+// toString() : 숫자형 데이터를 문자형 데이터로 변환해주는 함수 입니다.
+let x = 123;
+x.toString();
+console.log(x);
+
+// 논리형 : 참과 거짓을 구분 (true/false)
+let age = 40;
+
+let isAdult = (age > 18) ? true : false;
+console.log(isAdult);
+if(isAdult) console.log("당신은 성인입니다.");
+else console.log("당신은 미성년자 입니다.");
+
+// undefined : 변수와 상수를 선언하면 생성한 저장공간에 데이터를 할당하는 것이 일반적이지만 할당이 되지 않으면 임시적으로 undefined 상태로 만듬
+
+let empty;
+console.log(empty);
+
+console.log(empty2);
+var empty2 = 10;
+
+// null : 
+
+let a = null;
+console.log(a);
