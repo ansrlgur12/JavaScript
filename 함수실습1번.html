@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산기 만들기</title>
+    <!--
+        * input 태그로 숫자 입력 받기 (10)
+        * select 콤보 박스로 사칙연산 선택하기 (+, -, *, /)
+        * input 태그로 숫자 입력 받기 (20)
+        * 계산 버튼을 만들기
+
+    -->
+</head>
+<body>
+    <div id="container">
+        <input type="number" id="num1">
+        <select id = "operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input type="number" id="num2">
+        <button onclick="calculator()">계산</button>
+        <br><br>
+        <p id="result"></p>
+        
+
+    </div>
+    <script src="./함수실습1번.js"></script>
+</body>
+</html>
