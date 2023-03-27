@@ -68,3 +68,45 @@ console.log(`코드 블록 내부 b : ${b}`);
     let message = "Hello, world !!!";
     console.log(message);
 })();
+
+// Callback 함수 : 함수의 인자로 다른 함수를 전달하여
+// 그 함수가 실행될 때 호출되는 함수를 의미하고 비동기적인 작업을 처리할 때 많이 사용
+// 함수 이름 넘기기
+function cry(){
+    console.log("cry");
+}
+function sing() {
+    console.log("sing");
+}
+function dance(){
+    console.log("dance");
+}
+function checkMood(mood) {
+    if(mood === "good") sing();
+    else cry();
+}
+checkMood("good");
+checkMood("sad");
+
+// 콜백 함수
+function checkMoodCallback(mood, goodCall, badCall){
+    if(mood === "good") goodCall();
+    else badCall();
+}
+checkMoodCallback("good", dance, cry);
+checkMoodCallback("Not bad", dance, sing);
+
+// 타이머 설정과 Callback 함수
+function buyTobe(item, price, quantity, callback) {
+    console.log(item + "상품을 " + quantity  + "개 골라서 점원에게 주었습니다.")
+    setTimeout(function() { // 첫번째 인자로 실행할 코드를 담고, 두번째 인자로 지연시간
+        console.log("계산이 필요 합니다.")
+        let total = price * quantity;
+        callback(total);
+    }, 2000);
+}
+function pay(n) {
+    console.log(" 지불 할 금액은 : " + n + "입니다.");
+}
+
+buyTobe("\'밤고구마 맛없음\'", 1000, 5, pay);
