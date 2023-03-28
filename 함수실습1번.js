@@ -12,7 +12,7 @@ function calculator() {
         case "*" : result = mul(num1,num2); break;
         case "/" : result = div(num1,num2); break;
     }
-    document.getElementById("result").innerHTML = `Result : ${result}`;
+    document.getElementById("result").innerHTML = `평균 : ${result}`;
 }
 function add(a, b) {
     return a + b;

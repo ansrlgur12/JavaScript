@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로또번호생성기</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+        }
+        body{
+            background-image: url(./images/starpc.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .title{
+            margin-top: 30px;
+            margin-bottom: 30px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.5em;
+            font-weight: bold;
+            height: 10vh;
+            background-color: rgba(84, 198, 247, 0.5);
+            color: hsl(0, 0%, 18%);
+            border: 0px solid white;
+            border-radius: 5px;
+        }
+        #container{
+            width: 800px;
+            height: 30vh;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .number-box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 0.5px solid #ccc;
+            border-radius: 50px;
+            color: white;
+            font-size: 150%;
+            font-weight: bold;
+            width: 80px;
+            height: 80px;
+        }
+       
+        .box1{
+            background-color: orangered;
+        }
+        .box2{
+            background-color: royalblue;
+        }
+        .box3{
+            background-color: goldenrod;
+        }
+        .box4{
+            background-color: darkolivegreen;
+        }
+        .box5{
+            background-color:darkblue;
+        }
+        .box6{
+            background-color:darkorchid;
+        }
+        .box7{
+            background-color:salmon;
+        }
+        .plus{
+            font-size: 200%;
+            font-weight: bold;
+        }
+        .btn{
+            width: 120px;
+            height: 50px;
+            background-color: #b6b6b6;
+            border: 0px solid black;
+            border-radius: 8px;
+            box-shadow: 2px 2px 5px black;
+            color: white;
+            font-weight: bold;
+            font-size: 120%;
+        }
+        .btn:active{
+            background-color: rgb(43, 43, 43);
+            box-shadow: -2px -2px 5px #b6b6b6;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">로또 번호 생성기</div>
+    <button class="btn" onclick="lotto()">번호 생성</button>
+    
+    <div id="container">
+        <div class= "number-box box1" id="lotto1"></div>
+        <div class= "number-box box2" id="lotto2"></div>
+        <div class= "number-box box3" id="lotto3"></div>
+        <div class= "number-box box4" id="lotto4"></div>
+        <div class= "number-box box5" id="lotto5"></div>
+        <div class= "number-box box6" id="lotto6"></div>
+        <div class = "plus"> + </div>
+        <div class= "number-box box7" id="lotto7"></div>
+    </div>
+    <script src="./중복없는로또.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+        }
+        #container{
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        h2{
+            margin-bottom: 15px;
+        }
+        .score{
+            width: 150px;
+            height: 30px;
+            margin: 10px;
+        }
+        .btn{
+            margin: 10px;
+            width: 150px;
+            height: 30px;
+        }
+        #result{
+            border: 1px solid black;
+            margin: 10px;
+            height: 30px;
+            width: 150px;
+            border-radius: 3px;
+            padding: 3px;
+            font-size: 0.8em;
+        }
+        #sum{
+            border: 1px solid black;
+            margin: 10px;
+            height: 30px;
+            width: 150px;
+            border-radius: 3px;
+            padding: 3px;
+            font-size: 0.8em;
+        }
+        .btn:active{
+            background-color: hsl(0, 0%, 16%);
+            color: #ccc;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h2>점수 입력</h2>
+        <input class = "score" type="number" id = "score1" placeholder="원섭">
+        <input class = "score" type="number" id = "score2" placeholder="세희">
+        <input class = "score" type="number" id = "score3" placeholder="상근">
+        <input class = "score" type="number" id = "score4" placeholder="숭이">
+        <input class = "score" type="number" id = "score5" placeholder="강수">
+        <button class = "btn" onclick="avg()">총합 / 평균 구하기</button>
+        <div id="sum">총합 :</div>
+        <div id="result">평균 : </div>
+    </div>
+    <script src="./평균점수.js"></script>
+</body>
+</html>
