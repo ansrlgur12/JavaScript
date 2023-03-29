@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+        }
+        .container{
+            background-color: rgba(192, 192, 192, .1);
+            border: 1px solid #ccc;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 500px;
+            height: 300px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px 5px hsl(0, 0%, 69%);
+        }
+        .first{
+            width: 350px;
+            height: 200px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+            
+        }
+        input{
+            text-align: right;
+            width: 120px;
+            margin-left: 15px;
+            margin-right: 10px;
+        }
+        .first .first-in{
+            font-size: 1.125em;
+            display: flex;
+            justify-content: center;
+            width: 80%;
+        }
+        .second{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: baseline;
+            width: 350px;
+            font-size: 1.125rem;
+            margin-bottom: 50px;
+        }
+        .second .point{
+            color: red;
+            font-size: 1.250rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="first">
+            <h2>당첨자 발표</h2>
+            <div class="first-in">
+                <label for="">응모자 수</label>
+                <input id="num" type="number" onchange="dangchum()">
+                <div>명</div>
+            </div>
+        </div>
+        <div class="second">
+            <div id="result"></div>
+        </div>
+    </div>
+    <script src="./당첨.js"></script>
+</body>
+</html>

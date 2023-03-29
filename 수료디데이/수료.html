@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(./images/67a6b69c-30a0-42b7-b374-31857de37efd.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .container{
+            width: 100vw;
+            height: 80vh;
+            margin : 0 auto;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            padding-top: 100px;
+        }
+        #remain-time{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 10px double goldenrod;
+            background-color: gold;
+            color:goldenrod ;
+            width: 25vw;
+            height: 25vw;
+            border-radius: 500px;
+            box-shadow: 0px 0px 20px yellow;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        #remain-time .title{
+            color:rgb(159, 122, 27);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="remain-time"></div>
+    </div>
+    <script src="./수료.js"></script>
+</body>
+</html>
