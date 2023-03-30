@@ -28,9 +28,9 @@ console.log(y);
 console.log(1 == '1'); // 문자열로 변환 후 비교 진행 (동등연산자)
 console.log(1 === '1'); // 일치연산자 - 값과 형이 모두 같은지 비교하는 연산자
 
-let val = '100';
-if(val != 100) console.log("100이 아닙니다.");
-else console.log("100 입니다.");
+let val = 100;
+if(val === 100) console.log("100 입니다.");
+else console.log("100이 아닙니다.");
 
 // 논리연산자 : 항상 비교연산자와 결합되어 사용 됩니다.
 // &&(and), ||(or), !(not)
