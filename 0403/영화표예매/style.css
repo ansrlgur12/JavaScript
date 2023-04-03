@@ -1,0 +1,40 @@
+#container {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.seat {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: space-around;
+    align-items: center;
+}
+
+ .seat .box{
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    width: 50vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#container #openBook{
+    flex-direction: row;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    display:none;
+}
