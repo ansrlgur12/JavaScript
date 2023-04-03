@@ -9,20 +9,28 @@ let cnt = 0;
 let total = 0;
 
 function booking(){
-    document.querySelector('#openBook').style.display = "block";	// 상세 설명 부분을 화면에 표시
+    document.querySelector('#openBook').style.display = "block";
 }
-function done(){
+
+
+const close = document.getElementById("close");
+
+close.addEventListener("click",function(){
     const boxEls = document.querySelectorAll("p");
     for(let e of boxEls) {
         if(e.style.backgroundColor == "red") {
             cnt++;
         }
     }
-    document.querySelector('#openBook').style.display = "none";	// 상세 설명 부분을 화면에 표시
+    document.querySelector('#openBook').style.display = "none";
     console.log(cnt);
     total = cnt;
     cnt = 0;
-}
+    
+})
+
+
+
 function programDone(){
     total = total * 12000;
     alert(`총 매출액은 ${total}입니다.`);
@@ -34,4 +42,14 @@ boxEls.forEach((e) =>  {
     e.addEventListener("click", () => {
             e.style.backgroundColor = "red";
     });
+});
+
+const fin = document.getElementById("done");
+fin.addEventListener("click", function(){
+    console.log("click");
+});
+
+const start = document.getElementById("open");
+start.addEventListener("click", function(){
+    console.log("open");
 });
