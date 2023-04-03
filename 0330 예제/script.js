@@ -2,6 +2,12 @@ function addSubject(){
     let subject = document.createElement("li");
     subject.innerText = document.frm.subject.value;
     itemList.appendChild(subject);
+    subject.addEventListener("click", function(){
+        subject.remove();
+    });
+
+    let reset = document.getElementById("needReset");
+    reset.value = null;
 }
 
 const form = document.querySelectorAll("form");
@@ -12,4 +18,9 @@ for(let e of form) {
     });
 }
 
-// 리스트 클릭하면 삭제되는 함수 구현.
+const list = document.querySelectorAll("li");
+for(let e of list) {
+    e.addEventListener("click", function(){
+        e.style.color = "red";
+    });
+}
