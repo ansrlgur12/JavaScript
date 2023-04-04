@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container .inputDiv .hide{
+            display: none;
+        }
+        .btn{
+            background-color: royalblue;
+            color: white;
+        }
+        .off{
+            background-color: rgba(65, 105, 225, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="inputDiv">
+            <input type="text" id="id" placeholder="아이디 입력">
+            <button onclick="idCheck()">확인</button>
+            <div id="idWrong" class="hide">아이디를 확인하세요</div>
+        </div>
+        <div class="inputDiv">
+            <input type="password" id="pwd" placeholder="패스워드 입력">
+            <button onclick="pwdCheck()" type="submit">확인</button>
+            <div id="pwdWrong" class="hide">비밀번호를 확인하세요</div>
+        </div>
+        <div class="inputDiv">
+            <input type="text" id="email" placeholder="이메일 입력">
+            <button onclick="emailCheck()" type="submit">확인</button>
+            <div id="emailWrong" class="hide">e-mail 주소를 확인하세요</div>
+        </div>
+        <div class="inputDiv">
+            <input type="text" id="phone" placeholder="전화번호 입력">
+            <button onclick="phoneCheck()" type="submit">확인</button>
+            <div id="phoneWrong" class="hide">전화번호를 확인하세요</div>
+        </div>
+        <button id="fin" class="btn off">가입 요청</button>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
