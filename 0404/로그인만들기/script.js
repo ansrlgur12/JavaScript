@@ -1,6 +1,3 @@
-let cnt = 0;
-const inputBtn = document.getElementById("fin");
-
 function idCheck() {
     const inputId = document.getElementById("id").value;
     console.log(`${inputId}`);
@@ -10,11 +7,6 @@ function idCheck() {
     if(regId == true) {
         alert("사용 가능한 아이디입니다.");
         hideIdWrong();
-        cnt += 1;
-        if(cnt == 4) {
-            inputBtn.classList.remove('off');
-            cnt = 0;
-        }
     } else {
         let reset = document.getElementById("id");
         reset.value = null; // input창 초기화 메소드
@@ -28,11 +20,6 @@ function pwdCheck() {
     if(regPwd == true) {
         alert("사용 가능한 비밀번호 입니다.");
         hidePwdWrong();
-        cnt += 1;
-        if(cnt == 4) {
-            inputBtn.classList.remove('off');
-            cnt = 0;
-        }
     } else {
         let reset = document.getElementById("pwd");
         reset.value = null; // input창 초기화 메소드
@@ -46,11 +33,6 @@ function emailCheck() {
     if(regEmail == true) {
         alert("사용 가능한 이메일 입니다.");
         hideEmailWrong();
-        cnt += 1;
-        if(cnt == 4) {
-            inputBtn.classList.remove('off');
-            cnt = 0;
-        }
     } else {
         let reset = document.getElementById("email");
         reset.value = null; // input창 초기화 메소드
@@ -65,11 +47,6 @@ function phoneCheck() {
     if(regPhone == true) {
         alert("사용 가능한 전화번호 입니다.");
         hidePhoneWrong();
-        cnt += 1;
-        if(cnt == 4) {
-            inputBtn.classList.remove('off');
-            cnt = 0;
-        }
     } else {
         let reset = document.getElementById("phone");
         reset.value = null; // input창 초기화 메소드
@@ -109,7 +86,3 @@ function hidePhoneWrong() {
 }
 
 
-
-if(cnt == 4) {
-    inputBtn.classList.remove('off');
-}
