@@ -1,13 +1,21 @@
-// 객체 생성
-const xhr = new XMLHttpRequest();
-xhr.open("POST", "URL 경로"); // IP주소, port번호, 백앤드가 수신할 컨트롤러
-xhr.setRequestHeader("contents-type", "application/json");
+const xhr = new XMLHttpRequest(); // XMLHttpRequest 객체 생성
+xhr.open("POST", "https://jsonplaceholder.typicode.com/posts"); // HTTP Method, URL 정의
+xhr.setRequestHeader("content-type", "application/json"); // 헤더 값 중 content-type 정의
 const data = {
-    id : 100,
-    title : "비동기통신 연습하기",
-    author : "곰돌이사육사"
-};
+    id : "jks2024",
+    pwd : "sphb8250",
+    name : "곰돌이사육사",
+    addr : "경기도 수원시"
+}
+xhr.send(JSON.stringify(data)); // XMLHttpRequest 객체를 사용하여 서버로 HTTP 요청을 보내는 메소드
 
-xhr.send(JSON.stringify(data));
 
-
+xhr.onload = () => { // XMLHttpRequest 객체에서 요청이 공적으로 완료되었을 때 호출되는 핸들러
+    if(xhr.status === 201) { 
+        // 정상적으로 응답되면 status가 200
+        const res = JSON.parse(xhr.response); 
+        console.log(res);
+    } else { // 에러 발생
+        console.error(xhr.status, xhr.statusText); // 응답 상태와 응답 메시지를 출력
+    }
+}

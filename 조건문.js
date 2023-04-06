@@ -6,4 +6,3 @@ if(num >= 0) {
 } else {
     document.write(`<h2> ${num}은 음수 입니다. </h2>`);
 }
-
